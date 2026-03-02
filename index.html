@@ -9,6 +9,22 @@
     <meta name="theme-color" content="#000000">
 
     <style>
+        #pwa-install-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    padding: 12px 24px;
+    background-color: #01875f; /* Google Play Green */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
         /* Reset and Full Screen Setup */
         body, html {
             margin: 0;
@@ -65,7 +81,9 @@
         <div class="spinner"></div>
         <p>Opening App...</p>
     </div>
-
+<button id="pwa-install-btn" style="display: none;" onclick="triggerInstall()">
+    📥 Install App
+</button>
     <iframe id="app-frame" src="https://kkk999.live" onload="hideLoader()"></iframe>
 
     <script>
@@ -121,5 +139,6 @@ window.addEventListener('appinstalled', (evt) => {
 });
 </body>
 </html>
+
 
 
